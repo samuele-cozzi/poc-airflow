@@ -1,0 +1,6 @@
+dags:
+  gitSync:
+    enabled: true
+    repo: samuele-cozzi/poc-airflow.git
+    branch: master
+    subPath: "dags"
