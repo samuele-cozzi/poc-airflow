@@ -1,6 +1,8 @@
 dags:
+  persistence:
+    enabled: true
   gitSync:
     enabled: true
-    repo: samuele-cozzi/poc-airflow.git
-    branch: master
-    subPath: "dags"
+    repo: https://github.com/samuele-cozzi/poc-airflow.git
+    branch: main
+    subPath: dags
