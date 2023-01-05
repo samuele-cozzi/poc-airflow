@@ -10,6 +10,15 @@ helm upgrade --install airflow apache-airflow/airflow --namespace airflow --crea
 
 ```
 
+## Docker
+
+``` bash
+
+docker build -t samuelecozzi/job-sample:0.0.1 .
+docker push samuelecozzi/job-sample:0.0.1
+
+```
+
 ## Use Cases
 
 ### 1. k8s jobs
