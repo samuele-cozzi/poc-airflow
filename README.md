@@ -26,7 +26,7 @@ docker push samuelecozzi/job-sample:0.0.1
 ``` bash
 
 kubectl create namespace airflow-jobs
-kubectl apply -f ./k8s/job1.yaml --namespace airflow-jobs --create-namespace --debug
+kubectl apply -f ./k8s/job1.yaml --namespace airflow-jobs
 
 ```
 
