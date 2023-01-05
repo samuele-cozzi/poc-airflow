@@ -20,3 +20,8 @@ kubectl create namespace airflow-jobs
 kubectl apply -f ./k8s/job1.yaml --namespace airflow-jobs --create-namespace --debug
 
 ```
+
+
+## References
+
+- [dotnet job](https://benbrougher.tech/posts/kubernetes-cron-job/)
