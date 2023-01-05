@@ -23,6 +23,8 @@ docker push samuelecozzi/job-sample:0.0.1
 
 ### 1. k8s jobs
 
+Kubernetes Operator
+
 ``` bash
 
 kubectl create namespace airflow-jobs
@@ -35,3 +37,4 @@ kubectl apply -f ./k8s/job2.yaml --namespace airflow-jobs
 ## References
 
 - [dotnet job](https://benbrougher.tech/posts/kubernetes-cron-job/)
+- [kubernates executor vs operator](https://stackoverflow.com/questions/59952465/airflow-when-to-use-kubernetesexecutor-vs-kubernetespodoperator)
