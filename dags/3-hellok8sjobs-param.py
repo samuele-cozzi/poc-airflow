@@ -53,7 +53,7 @@ passing2 = KubernetesPodOperator(namespace='airflow-jobs',
 
 error = KubernetesPodOperator(namespace='airflow-jobs',
                           image="docker.io/samuelecozzi/job-sample:0.0.3",
-                          arguments=["samuele ciao ciaoo ciaooo"],
+                          arguments=["samuele","a","b","c"],
                           labels={"foo": "bar"},
                           name="error-test",
                           task_id="error-task",
