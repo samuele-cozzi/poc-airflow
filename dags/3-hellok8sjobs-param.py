@@ -55,8 +55,8 @@ error = KubernetesPodOperator(namespace='airflow-jobs',
                           image="docker.io/samuelecozzi/job-sample:0.0.3",
                           arguments=["samuele ciao ciaoo ciaooo"],
                           labels={"foo": "bar"},
-                          name="passing2-test",
-                          task_id="passing2-task",
+                          name="error-test",
+                          task_id="error-task",
                           get_logs=True,
                           dag=dag
                           )
