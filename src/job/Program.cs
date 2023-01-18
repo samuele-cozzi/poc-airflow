@@ -1,5 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+//string[] args = Environment.GetCommandLineArgs();
+
+if (args.Length > 3) {
+    throw new Exception("Errore!!!");
+}
+else if (args.Length == 0)
+{
+    Console.WriteLine($"Hello, World!");
+}
+else{
+    foreach (var arg in args){
+        Console.WriteLine($"Hello, {arg}!");
+    }
+}
+
+
 
 // using job;
 // using Microsoft.Extensions.DependencyInjection;

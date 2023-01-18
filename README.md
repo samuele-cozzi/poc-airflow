@@ -33,6 +33,12 @@ kubectl apply -f ./k8s/job2.yaml --namespace airflow-jobs
 
 ```
 
+## Run Airflow
+
+``` bash
+kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
+
+```
 
 ## References
 
