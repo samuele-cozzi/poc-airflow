@@ -1,11 +1,41 @@
 extraEnv: |
   - name: AIRFLOW__API__AUTH_BACKENDS
     value: 'airflow.api.auth.backend.basic_auth'
-ags:
+dags:
   persistence:
     enabled: true
+    size: 200Mi
   gitSync:
     enabled: true
     repo: https://github.com/samuele-cozzi/poc-airflow.git
     branch: main
     subPath: dags
+logs:
+  persistence:
+    size: 200Mi
+postgresql:
+  enabled: false
+data:
+  metadataConnection:
+    user: okteto
+    pass: okteto
+    protocol: postgresql
+    host: postgresql
+    port: 5432
+    db: okteto
+  brokerUrl: redis://:Password01@redis:6379/0
+ingress:
+  web:
+    enabled: true
+    hosts: [web-poc-airflow-samuele-cozzi.cloud.okteto.net]
+workers:
+  persistence:
+    size: 1Gi
+  updateStrategy: 
+    type: RollingUpdate
+  logGroomerSidecar:
+    enabled: false
+redis:
+  enabled: false
+  # persistence:
+  #   size: 200Mi

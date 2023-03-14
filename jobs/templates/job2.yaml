@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "jobs.fullname" . }}-job2
+  labels:
+  {{- include "jobs.labels" . | nindent 4 }}
+spec:
+  backoffLimit: 4
+  template:
+    spec:
+      containers:
+      - image: docker.io/samuelecozzi/job-sample:0.0.2
+        name: job
+      restartPolicy: Never

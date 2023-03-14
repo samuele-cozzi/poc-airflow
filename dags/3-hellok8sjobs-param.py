@@ -32,7 +32,7 @@ start = DummyOperator(task_id='run_this_first', dag=dag)
 #                           dag=dag
 #                           )
 
-passing1 = KubernetesPodOperator(namespace='airflow-jobs',
+passing1 = KubernetesPodOperator(namespace='jobs-samuele-cozzi',
                           image="docker.io/samuelecozzi/job-sample:0.0.3",
                           labels={"foo": "bar"},
                           name="passing1-test",
@@ -41,7 +41,7 @@ passing1 = KubernetesPodOperator(namespace='airflow-jobs',
                           dag=dag
                           )
 
-passing2 = KubernetesPodOperator(namespace='airflow-jobs',
+passing2 = KubernetesPodOperator(namespace='jobs-samuele-cozzi',
                           image="docker.io/samuelecozzi/job-sample:0.0.3",
                           arguments=["samuele"],
                           labels={"foo": "bar"},
